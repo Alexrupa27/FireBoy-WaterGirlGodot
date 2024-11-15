@@ -18,11 +18,11 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Instruccions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
