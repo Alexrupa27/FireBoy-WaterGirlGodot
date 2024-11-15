@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1fgi0rj82mmg"]
+[gd_scene load_steps=7 format=3 uid="uid://d1fgi0rj82mmg"]
 
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="1_0utki"]
+[ext_resource type="Script" path="res://SCRIPT/control.gd" id="1_3aq1a"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="2_2dfap"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iic4s"]
@@ -12,13 +13,14 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8p3o"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Control" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3aq1a")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -67,3 +69,7 @@ theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8p3o")
 text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Instruccions" to="." method="_on_instruccions_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
