@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1fgi0rj82mmg"]
+[gd_scene load_steps=9 format=3 uid="uid://d1fgi0rj82mmg"]
 
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="1_0utki"]
 [ext_resource type="Script" path="res://SCRIPT/control.gd" id="1_3aq1a"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="2_2dfap"]
 [ext_resource type="Theme" uid="uid://bxod4iaek16su" path="res://Themes/ButtonMenuTheme.tres" id="3_xebcb"]
+[ext_resource type="AudioStream" uid="uid://b8l1rtmlnevr3" path="res://Sound/menuMusic.mp3" id="5_rkf7h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iic4s"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -73,6 +74,11 @@ theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8p3o")
 text = "Exit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_rkf7h")
+volume_db = 11.886
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Instruccions" to="." method="_on_instruccions_pressed"]
