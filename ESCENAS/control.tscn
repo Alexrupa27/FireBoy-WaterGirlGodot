@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="1_0utki"]
 [ext_resource type="Script" path="res://SCRIPT/control.gd" id="1_3aq1a"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="2_2dfap"]
-[ext_resource type="Theme" uid="uid://bxod4iaek16su" path="res://Themes/ButtonMenuTheme.tres" id="3_xebcb"]
+[ext_resource type="Theme" uid="uid://bxod4iaek16su" path="res://FONTS/ButtonMenuTheme.tres" id="3_xebcb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iic4s"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -61,7 +61,6 @@ text = "Play"
 [node name="Instruccions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_xebcb")
-theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vaiph")
 text = "Instruccions"
