@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://c0ofke6gi0nnt"]
+[gd_scene load_steps=5 format=4 uid="uid://fjlv76n0k0dc"]
 
 [ext_resource type="AudioStream" uid="uid://bbg6mb4ud3nql" path="res://Sound/FirstLevel.mp3" id="1_jjme6"]
 [ext_resource type="Texture2D" uid="uid://dxq3ovsbwxnwq" path="res://ASSETS/tileset.png" id="2_fo8oe"]

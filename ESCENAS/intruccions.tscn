@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://SCRIPT/intruccions.gd" id="1_djp1f"]
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="2_4ga1f"]
 [ext_resource type="Texture2D" uid="uid://dgnpgi1hpejb7" path="res://ASSETS/Captura_de_pantalla_2024-11-15_154342-removebg-preview (1).png" id="4_4ew4v"]
-[ext_resource type="Theme" uid="uid://bxod4iaek16su" path="res://Themes/ButtonMenuTheme.tres" id="4_34yer"]
+[ext_resource type="Theme" path="res://FONTS/ButtonMenuTheme.tres" id="4_34yer"]
 [ext_resource type="Script" path="res://SCRIPT/Button_ok.gd" id="5_snyq2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evlbl"]

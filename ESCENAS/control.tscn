@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1fgi0rj82mmg"]
+[gd_scene load_steps=10 format=3 uid="uid://d1fgi0rj82mmg"]
 
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="1_0utki"]
 [ext_resource type="Script" path="res://SCRIPT/control.gd" id="1_3aq1a"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="2_2dfap"]
-[ext_resource type="Theme" uid="uid://bxod4iaek16su" path="res://Themes/ButtonMenuTheme.tres" id="3_xebcb"]
+[ext_resource type="Theme" uid="uid://clu5enkh0ecal" path="res://Themes/ButtonMenuTheme.tres" id="3_xebcb"]
+[ext_resource type="Theme" path="res://FONTS/ButtonMenuTheme.tres" id="4_gwrb0"]
 [ext_resource type="AudioStream" uid="uid://b8l1rtmlnevr3" path="res://Sound/menuMusic.mp3" id="5_rkf7h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iic4s"]
@@ -48,12 +49,13 @@ offset_right = 223.5
 offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_xebcb")
 theme_override_constants/separation = 31
 alignment = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_xebcb")
+theme = ExtResource("4_gwrb0")
 theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_iic4s")
@@ -61,7 +63,7 @@ text = "Play"
 
 [node name="Instruccions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_xebcb")
+theme = ExtResource("4_gwrb0")
 theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vaiph")
@@ -69,7 +71,7 @@ text = "Instruccions"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("3_xebcb")
+theme = ExtResource("4_gwrb0")
 theme_override_fonts/font = ExtResource("2_2dfap")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8p3o")
