@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3xdmf15frqbb"]
+[gd_scene load_steps=9 format=3 uid="uid://b3xdmf15frqbb"]
 
 [ext_resource type="Script" path="res://SCRIPT/intruccions.gd" id="1_djp1f"]
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="2_4ga1f"]
 [ext_resource type="Texture2D" uid="uid://dgnpgi1hpejb7" path="res://ASSETS/Captura_de_pantalla_2024-11-15_154342-removebg-preview (1).png" id="4_4ew4v"]
 [ext_resource type="Theme" uid="uid://clu5enkh0ecal" path="res://Themes/ButtonMenuTheme.tres" id="4_vfpks"]
 [ext_resource type="Script" path="res://SCRIPT/Button_ok.gd" id="5_snyq2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oci23"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evlbl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -54,8 +57,10 @@ offset_left = 548.0
 offset_top = 512.0
 offset_right = 612.0
 offset_bottom = 551.0
+focus_mode = 0
 theme = ExtResource("4_vfpks")
 theme_override_font_sizes/font_size = 34
+theme_override_styles/hover = SubResource("StyleBoxFlat_oci23")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_evlbl")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dm34u")
 text = "OK

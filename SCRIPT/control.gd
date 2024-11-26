@@ -1,9 +1,12 @@
 extends Control 
 
+
+
+
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://ESCENAS/niveles.tscn")
-
-
+	# Cambiar el tamaño del botón al hacer clic
+		
 
 func _on_instruccions_pressed() -> void:
 	get_tree().change_scene_to_file("res://ESCENAS/intruccions.tscn")

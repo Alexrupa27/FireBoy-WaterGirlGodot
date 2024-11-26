@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://i6rwb066igbl"]
+
+[ext_resource type="Texture2D" uid="uid://nc6xiypxtp0v" path="res://ASSETS/Browser Games - Fireboy and Watergirl The Forest Temple - Level Select.png" id="1_to65v"]
+
+[node name="LEVEL" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 98.0
+offset_right = 2599.0
+offset_bottom = 1061.0
+texture = ExtResource("1_to65v")
