@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1fgi0rj82mmg"]
+[gd_scene load_steps=10 format=3 uid="uid://d1fgi0rj82mmg"]
 
 [ext_resource type="Texture2D" uid="uid://b5va2jfepv677" path="res://ASSETS/217375 (1).png" id="1_0utki"]
 [ext_resource type="Script" path="res://SCRIPT/control.gd" id="1_3aq1a"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="2_2dfap"]
 [ext_resource type="Theme" uid="uid://clu5enkh0ecal" path="res://Themes/ButtonMenuTheme.tres" id="3_xebcb"]
 [ext_resource type="AudioStream" uid="uid://b8l1rtmlnevr3" path="res://Sound/menuMusic.mp3" id="5_rkf7h"]
+[ext_resource type="Texture2D" uid="uid://cisb1evfj1oci" path="res://ASSETS/light.png" id="6_nyayj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iic4s"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -60,6 +61,21 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_iic4s")
 text = "Play"
 
+[node name="Label" type="Label" parent="VBoxContainer/Play"]
+visible = false
+layout_mode = 2
+offset_left = 163.5
+offset_top = -2.0
+offset_right = 610.5
+offset_bottom = 49.0
+theme = ExtResource("3_xebcb")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.964742, 0.964742, 0.964742, 1)
+theme_override_colors/font_outline_color = Color(0.986752, 0.986752, 0.986752, 1)
+theme_override_fonts/font = ExtResource("2_2dfap")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
 [node name="Instruccions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_xebcb")
@@ -80,6 +96,12 @@ text = "Exit"
 stream = ExtResource("5_rkf7h")
 volume_db = 11.886
 autoplay = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(577, 317)
+scale = Vector2(0.671759, 0.62037)
+color = Color(1, 1, 1, 0.239216)
+texture = ExtResource("6_nyayj")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Instruccions" to="." method="_on_instruccions_pressed"]
