@@ -1,0 +1,208 @@
+[gd_scene load_steps=18 format=3 uid="uid://i6rwb066igbl"]
+
+[ext_resource type="Texture2D" uid="uid://qf2rllsmyxh4" path="res://ASSETS/Level Select.png" id="1_28irp"]
+[ext_resource type="Texture2D" uid="uid://nb71nv2t3a1c" path="res://ASSETS/pared.png" id="2_7bohp"]
+[ext_resource type="Texture2D" uid="uid://dmmlmubcqxnqd" path="res://ASSETS/hojas.png" id="3_tgfeb"]
+[ext_resource type="Texture2D" uid="uid://dy8yc4rkq40iy" path="res://ASSETS/levelll.png" id="4_n1e5x"]
+[ext_resource type="Texture2D" uid="uid://cobwebcbak8ek" path="res://ASSETS/diamante.png" id="5_qs3kb"]
+[ext_resource type="Texture2D" uid="uid://c0t83l2bs0847" path="res://ASSETS/point.png" id="6_uqnu8"]
+[ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="7_8yka1"]
+[ext_resource type="Theme" uid="uid://clu5enkh0ecal" path="res://Themes/ButtonMenuTheme.tres" id="8_xswdq"]
+[ext_resource type="Script" path="res://SCRIPT/main_menu.gd" id="9_n5xnm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aq4i0"]
+texture = ExtResource("5_qs3kb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxvv8"]
+texture = ExtResource("6_uqnu8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtj3y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi6mc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_po42d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="Animation" id="Animation_2r2i2"]
+resource_name = "carrega"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 2, 2]
+}
+
+[sub_resource type="Animation" id="Animation_qwk5f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c1w17"]
+_data = {
+"RESET": SubResource("Animation_qwk5f"),
+"carrega": SubResource("Animation_2r2i2")
+}
+
+[node name="LEVEL" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00379, 0.99878)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -324.0
+offset_right = 429.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_28irp")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 22.3616
+offset_top = 562.686
+offset_right = 185.362
+offset_bottom = 638.686
+rotation = -0.00032755
+scale = Vector2(1.40603, 0.632339)
+texture = ExtResource("2_7bohp")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -12.0
+offset_right = 874.0
+offset_bottom = 713.0
+texture = ExtResource("3_tgfeb")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 10.0
+offset_right = 831.0
+offset_bottom = 635.0
+texture = ExtResource("4_n1e5x")
+
+[node name="Button" type="Button" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 578.0
+offset_right = 420.0
+offset_bottom = 630.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_aq4i0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sxvv8")
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect"]
+modulate = Color(0.137977, 0.0967152, 0.014141, 1)
+layout_mode = 0
+offset_left = 54.1613
+offset_top = 574.713
+offset_right = 253.161
+offset_bottom = 606.713
+theme_override_fonts/font = ExtResource("7_8yka1")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[node name="MainMenu" type="Button" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 571.0
+offset_right = 303.0
+offset_bottom = 611.0
+focus_mode = 0
+theme = ExtResource("8_xswdq")
+theme_type_variation = &"FlatButton"
+theme_override_fonts/font = ExtResource("7_8yka1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_vtj3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hi6mc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_po42d")
+text = "Main Menu"
+script = ExtResource("9_n5xnm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c1w17")
+}
+
+[connection signal="mouse_entered" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_exited"]
+[connection signal="pressed" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_pressed"]

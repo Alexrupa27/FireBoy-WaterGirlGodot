@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://clu5enkh0ecal"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bk7p626slo7ec"]
 
-[ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="1_3nyo5"]
+[ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="1_tmcjm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxnbb"]
 content_margin_left = 4.0
@@ -35,6 +35,18 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo55l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cseor"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -59,24 +71,23 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="SystemFont" id="SystemFont_o0w52"]
-
 [resource]
-default_font = SubResource("SystemFont_o0w52")
-Button/colors/font_color = Color(0.801068, 0.712353, 0.138433, 1)
+default_font = ExtResource("1_tmcjm")
+default_font_size = 10
+Button/colors/font_color = Color(0.356863, 0.262745, 0.0823529, 1)
 Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
-Button/colors/font_focus_color = Color(0.8, 0.713726, 0.137255, 1)
-Button/colors/font_hover_color = Color(0.961487, 0.877091, 0.366051, 1)
+Button/colors/font_focus_color = Color(0.368627, 0.278431, 0.0705882, 1)
+Button/colors/font_hover_color = Color(0.364706, 0.27451, 0.0705882, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
-Button/colors/font_pressed_color = Color(0.8, 0.713726, 0.137255, 1)
+Button/colors/font_pressed_color = Color(0.372549, 0.282353, 0.0705882, 1)
 Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 6
-Button/font_sizes/font_size = 50
-Button/font_sizes/hover = 55
-Button/fonts/font = ExtResource("1_3nyo5")
+Button/font_sizes/font_size = 19
+Button/fonts/font = ExtResource("1_tmcjm")
 Button/styles/disabled = SubResource("StyleBoxFlat_dxnbb")
 Button/styles/focus = SubResource("StyleBoxFlat_gyojy")
+Button/styles/hover = SubResource("StyleBoxFlat_jo55l")
 Button/styles/normal = SubResource("StyleBoxFlat_cseor")
 Button/styles/pressed = SubResource("StyleBoxFlat_cnowr")

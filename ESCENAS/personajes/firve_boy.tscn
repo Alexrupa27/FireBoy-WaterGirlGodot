@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4m6l1lrvqqn6"]
+
+[ext_resource type="Texture2D" uid="uid://bqp0ql0iwqq3k" path="res://ASSETS/fireBoy/bodyFire.png" id="1_l0kor"]
+[ext_resource type="Texture2D" uid="uid://p81yt8oilgv1" path="res://ASSETS/fireBoy/fire_1.png" id="2_mxfaw"]
+[ext_resource type="Texture2D" uid="uid://s7t1wlhqjret" path="res://ASSETS/fireBoy/fire_2.png" id="3_q6mfx"]
+[ext_resource type="Texture2D" uid="uid://b824pw2tae437" path="res://ASSETS/fireBoy/fire_3.png" id="4_wjip1"]
+[ext_resource type="Texture2D" uid="uid://c0twetmrap10v" path="res://ASSETS/fireBoy/fire_4.png" id="5_hnm51"]
+[ext_resource type="Texture2D" uid="uid://btfdofeyc8yd2" path="res://ASSETS/fireBoy/fire_5.png" id="6_kppnu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gkda"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mxfaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q6mfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wjip1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hnm51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kppnu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 17.0
+}]
+
+[node name="FirveBoy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48, 200)
+scale = Vector2(0.99495, 0.99495)
+texture = ExtResource("1_l0kor")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(44, 3)
+sprite_frames = SubResource("SpriteFrames_4gkda")
