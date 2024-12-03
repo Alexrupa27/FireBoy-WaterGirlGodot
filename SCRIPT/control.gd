@@ -5,10 +5,11 @@ extends Control
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
-	var anim_scene = preload("res://ESCENAS/canvas_carrega.tscn")
-	var instance = anim_scene.instantiate()
-	add_child(instance)
-	animated_sprite_2d.play("default")
+	pass
+	#var anim_scene = preload("res://ESCENAS/canvas_carrega.tscn")
+	#var instance = anim_scene.instantiate()
+	#add_child(instance)
+	#animated_sprite_2d.play("default")
 
 func _on_play_pressed() -> void:
 	animation_player.play("carrega")
