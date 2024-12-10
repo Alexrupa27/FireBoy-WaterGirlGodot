@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://fjlv76n0k0dc"]
+[gd_scene load_steps=8 format=3 uid="uid://fjlv76n0k0dc"]
 
 [ext_resource type="AudioStream" uid="uid://bbg6mb4ud3nql" path="res://Sound/FirstLevel.mp3" id="1_jjme6"]
 [ext_resource type="PackedScene" uid="uid://bnvcdkhk0av7n" path="res://ESCENAS/map.tscn" id="1_ntfmb"]
 [ext_resource type="Script" path="res://ESCENAS/fire_boy.gd" id="3_1i4b7"]
 [ext_resource type="Texture2D" uid="uid://dd1qh2lg45fon" path="res://ASSETS/static fireboy.png" id="3_miiob"]
+[ext_resource type="Script" path="res://ESCENAS/water_girl.gd" id="4_262ji"]
+[ext_resource type="Texture2D" uid="uid://ua3cxla53eor" path="res://ASSETS/WaterGirl/static_WaterGirl.png" id="5_o73ch"]
+
+
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4ij1"]
 radius = 16.0
@@ -25,9 +29,11 @@ autoplay = true
 parameters/looping = true
 
 [node name="FireBoy" type="CharacterBody2D" parent="."]
+
 z_index = 2
 position = Vector2(147, 124)
 scale = Vector2(0.728772, 0.728772)
+
 script = ExtResource("3_1i4b7")
 
 [node name="Sprite2D" type="Sprite2D" parent="FireBoy"]
@@ -36,24 +42,27 @@ scale = Vector2(0.774222, 0.717206)
 texture = ExtResource("3_miiob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireBoy"]
-position = Vector2(49, 585)
-shape = SubResource("CapsuleShape2D_u4ij1")
+position = Vector2(48.5, 581)
+shape = SubResource("RectangleShape2D_7uwnn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FireBoy"]
 
 [node name="WaterGirl" type="CharacterBody2D" parent="."]
-z_index = 2
-position = Vector2(139, 90)
-scale = Vector2(0.805576, 0.805576)
-script = ExtResource("3_1i4b7")
+
+position = Vector2(-18, 12)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_262ji")
+
 
 [node name="Sprite2D" type="Sprite2D" parent="WaterGirl"]
 position = Vector2(43, 467)
 scale = Vector2(0.774222, 0.717206)
-texture = ExtResource("3_miiob")
+texture = ExtResource("5_o73ch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterGirl"]
-position = Vector2(45, 471)
+z_index = 1
+position = Vector2(45, 473)
 shape = SubResource("CapsuleShape2D_u4ij1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="WaterGirl"]
