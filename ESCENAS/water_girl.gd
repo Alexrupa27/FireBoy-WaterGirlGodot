@@ -31,5 +31,5 @@ func _physics_process(delta: float) -> void:
 
 func get_input_axis() -> void:
 	# Capturar entrada del jugador
-	axis.x = int(Input.is_action_pressed("Fireboy_right")) - int(Input.is_action_pressed("Fireboy_left"))
-	axis.y = int(Input.is_action_just_pressed("Fireboy_up"))
+	axis.x = int(Input.is_action_pressed("WaterGirl_right")) - int(Input.is_action_pressed("WaterGirl_left"))
+	axis.y = int(Input.is_action_just_pressed("WaterGirl_up"))
