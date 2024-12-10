@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://i6rwb066igbl"]
+[gd_scene load_steps=20 format=3 uid="uid://i6rwb066igbl"]
 
 [ext_resource type="Texture2D" uid="uid://qf2rllsmyxh4" path="res://ASSETS/Level Select.png" id="1_28irp"]
 [ext_resource type="Texture2D" uid="uid://nb71nv2t3a1c" path="res://ASSETS/pared.png" id="2_7bohp"]
@@ -7,14 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://cobwebcbak8ek" path="res://ASSETS/diamante.png" id="5_qs3kb"]
 [ext_resource type="Texture2D" uid="uid://c0t83l2bs0847" path="res://ASSETS/point.png" id="6_uqnu8"]
 [ext_resource type="FontFile" uid="uid://5nhc2tevb36g" path="res://FONTS/trajanpro-bold.otf" id="7_8yka1"]
+[ext_resource type="Script" path="res://SCRIPT/level1.gd" id="7_pa6tv"]
 [ext_resource type="Theme" uid="uid://clu5enkh0ecal" path="res://Themes/ButtonMenuTheme.tres" id="8_xswdq"]
 [ext_resource type="Script" path="res://SCRIPT/main_menu.gd" id="9_n5xnm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aq4i0"]
 texture = ExtResource("5_qs3kb")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d1twp"]
+texture = ExtResource("5_qs3kb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxvv8"]
-texture = ExtResource("6_uqnu8")
+texture = ExtResource("5_qs3kb")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtj3y"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -161,14 +169,22 @@ offset_right = 831.0
 offset_bottom = 635.0
 texture = ExtResource("4_n1e5x")
 
+[node name="Point" type="Sprite2D" parent="TextureRect/TextureRect"]
+position = Vector2(397.859, 605.012)
+scale = Vector2(1.36981, 1.4471)
+texture = ExtResource("6_uqnu8")
+
 [node name="Button" type="Button" parent="TextureRect/TextureRect"]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 578.0
-offset_right = 420.0
-offset_bottom = 630.0
+offset_left = 378.931
+offset_top = 581.722
+offset_right = 416.931
+offset_bottom = 626.722
+focus_mode = 0
 theme_override_styles/hover = SubResource("StyleBoxTexture_aq4i0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d1twp")
 theme_override_styles/normal = SubResource("StyleBoxTexture_sxvv8")
+script = ExtResource("7_pa6tv")
 
 [node name="Label" type="Label" parent="TextureRect/TextureRect"]
 modulate = Color(0.137977, 0.0967152, 0.014141, 1)
@@ -203,6 +219,7 @@ libraries = {
 "": SubResource("AnimationLibrary_c1w17")
 }
 
+[connection signal="pressed" from="TextureRect/TextureRect/Button" to="TextureRect/TextureRect/Button" method="_on_pressed"]
 [connection signal="mouse_entered" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_exited"]
 [connection signal="pressed" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_pressed"]
