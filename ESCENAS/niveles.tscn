@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://fjlv76n0k0dc"]
+
+[ext_resource type="PackedScene" uid="uid://bnvcdkhk0av7n" path="res://ESCENAS/map.tscn" id="1_5h6nr"]
+[ext_resource type="AudioStream" uid="uid://bbg6mb4ud3nql" path="res://Sound/FirstLevel.mp3" id="1_jjme6"]
+[ext_resource type="PackedScene" uid="uid://b4yi1j6ssr4r3" path="res://ESCENAS/vox.tscn" id="2_ta4k5"]
+[ext_resource type="Script" path="res://SCRIPT/fire_boy.gd" id="3_1i4b7"]
+[ext_resource type="Texture2D" uid="uid://dd1qh2lg45fon" path="res://ASSETS/fireBoy/static fireboy.png" id="3_miiob"]
+[ext_resource type="PackedScene" uid="uid://dv7ffk7ysrifp" path="res://ESCENAS/platform.tscn" id="3_si2fv"]
+[ext_resource type="Script" path="res://SCRIPT/water_girl.gd" id="4_262ji"]
+[ext_resource type="Texture2D" uid="uid://ua3cxla53eor" path="res://ASSETS/WaterGirl/static_WaterGirl.png" id="5_o73ch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uwnn"]
+size = Vector2(39, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtrjo"]
+size = Vector2(12, 35)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4ij1"]
+radius = 16.0
+height = 46.0
+
+[node name="Niveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Map" parent="." instance=ExtResource("1_5h6nr")]
+
+[node name="Vox" parent="Map" groups=["RigidBody"] instance=ExtResource("2_ta4k5")]
+z_index = 4
+position = Vector2(577, 374)
+
+[node name="Platform" parent="Map" instance=ExtResource("3_si2fv")]
+position = Vector2(277, 216)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_jjme6")
+autoplay = true
+parameters/looping = true
+
+[node name="FireBoy" type="CharacterBody2D" parent="." groups=["player"]]
+z_index = 2
+position = Vector2(152, -38)
+script = ExtResource("3_1i4b7")
+
+[node name="Sprite2D" type="Sprite2D" parent="FireBoy"]
+position = Vector2(46, 578)
+scale = Vector2(0.774222, 0.717206)
+texture = ExtResource("3_miiob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireBoy"]
+position = Vector2(48, 584)
+shape = SubResource("RectangleShape2D_7uwnn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FireBoy"]
+
+[node name="Area2D" type="Area2D" parent="FireBoy"]
+position = Vector2(243, -71)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireBoy/Area2D"]
+position = Vector2(-196, 667.5)
+shape = SubResource("RectangleShape2D_xtrjo")
+
+[node name="WaterGirl" type="CharacterBody2D" parent="."]
+z_index = 2
+position = Vector2(153, -9)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("4_262ji")
+
+[node name="Sprite2D" type="Sprite2D" parent="WaterGirl"]
+position = Vector2(43, 467)
+scale = Vector2(0.774222, 0.717206)
+texture = ExtResource("5_o73ch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterGirl"]
+z_index = 1
+position = Vector2(43, 469)
+shape = SubResource("CapsuleShape2D_u4ij1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WaterGirl"]
+
+[connection signal="body_entered" from="FireBoy/Area2D" to="FireBoy" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="FireBoy/Area2D" to="FireBoy" method="_on_area_2d_body_exited"]

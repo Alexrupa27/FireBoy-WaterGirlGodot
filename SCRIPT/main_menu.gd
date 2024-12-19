@@ -21,3 +21,7 @@ func _on_pressed() -> void:
 	animation_player.play("carrega")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_file("res://ESCENAS/control.tscn")
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://ESCENAS/niveles.tscn")

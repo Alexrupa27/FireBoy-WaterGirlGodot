@@ -219,7 +219,11 @@ libraries = {
 "": SubResource("AnimationLibrary_c1w17")
 }
 
+<<<<<<< Updated upstream
 [connection signal="pressed" from="TextureRect/TextureRect/Button" to="TextureRect/TextureRect/Button" method="_on_pressed"]
+=======
+[connection signal="pressed" from="TextureRect/TextureRect/Button" to="TextureRect/TextureRect/MainMenu" method="_on_button_pressed"]
+>>>>>>> Stashed changes
 [connection signal="mouse_entered" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_mouse_exited"]
 [connection signal="pressed" from="TextureRect/TextureRect/MainMenu" to="TextureRect/TextureRect/MainMenu" method="_on_pressed"]
